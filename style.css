@@ -1,0 +1,612 @@
+:root {
+  --green: rgb(40, 54, 40);
+  --light: rgb(121, 158, 121);
+  --black: #222;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 63%;
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eee;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.btn {
+  background-color: var(--black);
+  padding: 1rem 2.5rem;
+  color: #eee;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  background-color: var(--green);
+  letter-spacing: 0.3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  padding: 1rem 8%;
+  display: flex;
+  position: fixed;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  background-color: #eee;
+}
+
+.header h1 {
+  color: #666;
+  font-size: 2.2rem;
+  margin: auto;
+}
+
+.header h1 span {
+  color: var(--green);
+  font-size: 4rem;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navlist {
+  display: flex;
+}
+
+.nav-icons #menu-icon {
+  display: none;
+}
+
+.navlist a {
+  margin-right: 4rem;
+  font-size: 1.6rem;
+  color: var(--light);
+}
+
+.navlist a:hover {
+  color: red;
+  letter-spacing: 0.1rem;
+}
+
+.nav-icons {
+  font-size: 1.8rem;
+  color: var(--light);
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-icons div {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.nav-icons div:hover {
+  color: red;
+}
+
+.search-form {
+  position: absolute;
+  width: 46rem;
+  top: 115%;
+  right: 7%;
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  background-color: #eee;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.search-form.active {
+  display: flex;
+}
+
+.search-form input {
+  border: var(--border);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  width: 90%;
+}
+
+.search-form input::placeholder {
+  font-size: 1.6rem;
+}
+
+.search-form i {
+  font-size: 2rem;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.search-form i:hover {
+  color: red;
+}
+
+/* banner section */
+
+.banner {
+  background: url(https://media.istockphoto.com/id/1470611457/photo/landscape-mountain-biking-adventure.jpg?b=1&s=170667a&w=0&k=20&c=xMvg_lb7TMEw0b_Kg986N8v693DKqdm_6sBl99YjuEI=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.banner-box {
+  background-color: #eee;
+  padding: 2.5rem;
+  max-width: 47rem;
+  margin-top: 6rem;
+}
+
+.banner-box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.banner-box p {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* post section */
+
+.container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1.3rem;
+}
+
+.post-container .post {
+  padding: 2rem;
+  border: var(--border);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  width: 99%;
+}
+
+.post .image {
+  width: 100%;
+  height: 40rem;
+  margin-bottom: 1rem;
+}
+
+.post .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.post h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.post p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #666;
+  
+}
+
+.post .p1 {
+  color: var(--light);
+}
+
+.post .reaction-box {
+  border-top: var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.post .reaction-box a {
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.post .reaction-box a:hover {
+  color: var(--light);
+}
+.post .reaction-box i {
+  color: var(--green);
+}
+.post .reaction-box .right .icon {
+  margin-right: 2rem;
+}
+
+.container .side-box {
+  border: var(--border);
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  min-width: 20rem;
+}
+
+.container .sidebar .box {
+  height: 40rem;
+  border-radius: 1rem;
+}
+
+.container .sidebar .aside-content {
+  padding: 3rem;
+}
+
+.container .sidebar h1 {
+  font-size: 2.1rem;
+  color: #fff;
+  background-color: var(--green);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.container .sidebar h3 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: var(--light);
+  margin-bottom: 0.3rem;
+}
+
+.container .sidebar img {
+  width: 15rem;
+  height: 14rem;
+  border-radius: 50%;
+  margin-bottom: 0.3rem;
+  object-fit: cover;
+}
+
+.container .sidebar p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.container .side-box .lastbox {
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+}
+.container .side-box .aside-content {
+  padding: 1rem;
+}
+
+.container .side-box .follow a {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.container .side-box .aside-content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.container .side-box .aside-content li {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.container .side-box .aside-content a {
+  color: #666;
+}
+.container .side-box li:hover,
+.container .side-box .aside-content a:hover {
+  color: var(--light);
+}
+
+.container .side-box .popularposts {
+  display: flex;
+}
+
+.container .side-box .popularposts li {
+  flex-direction: column;
+}
+
+.container .side-box .aside-content .tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .side-box .tags li {
+  border: var(--border);
+  color: #666;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.container .side-box .tags li:hover,
+.container .side-box .tags a:hover {
+  background-color: var(--light);
+  color: #fff;
+}
+
+/* contact me section */
+
+.contact {
+  background: url(https://media.istockphoto.com/id/512151814/photo/businessman-hike-on-the-peak-of-rocks-mountain-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=JUeUxSpL3hzixvJEdjYXujR-h8h62_NA_Qp09SLkXwQ=);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact .contact-box {
+  background-color: #fff;
+  border-radius: 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.contact .contact-box h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.contact .contact-box .form .input-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contact-box .form .input-box input {
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 4rem;
+  width: 30rem;
+  font-size: 1.6rem;
+}
+
+.contact .contact-box .form textarea {
+  border-radius: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 0.6rem;
+  width: 60rem;
+  font-size: 1.6rem;
+}
+
+.contact .contact-box .btn {
+  margin-bottom: 1rem;
+}
+
+/* footer section */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: var(--green);
+  color: #666;
+  font-size: 2rem;
+}
+
+.footer .follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .follow a {
+  color: var(--light);
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #666;
+}
+
+.footer .follow a:hover {
+  color: red;
+  letter-spacing: 0.2rem;
+  background-color: #eee;
+}
+
+/* media queries */
+
+@media (max-width: 1100px) {
+
+
+    section {
+        padding: 2rem;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}      
+
+
+
+@media (max-width: 800px) {
+
+
+  html {
+    font-size: 55%;
+  }
+  .navlist {
+    display: none;
+  }
+
+  .nav-icons #menu-icon {
+    display: inline-block;
+  }
+
+  .navlist.active {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    right: 5%;
+    display: block;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    background-color: #eee;
+  }
+
+  .navlist.active li {
+    background-color: #eee;
+    color: #666;
+    border: var(--border);
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0;
+  }
+
+  .post .image {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 1rem;
+  }
+
+  
+
+  .contact .contact-box {
+    width: 45rem;
+  }
+
+  .contact .contact-box form {
+    width: 45rem;
+  }
+
+  .contact .contact-box h1 {
+    text-align: center;
+    margin-right: 0.1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .contact .contact-box .form .input-box {
+    margin: 0 auto;
+    width: 40rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact .contact-box .form .input-box input {
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 4rem;
+    width: 18rem;
+    margin: 0 auto;
+  }
+
+  .contact .contact-box .form textarea {
+    width: 37rem;
+    margin-left: 4rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+  .search-form {
+    width: 34rem;
+  }
+
+  .banner-box {
+    margin-top: 5rem;
+  }
+  .banner-box h1 {
+    font-size: 2rem;
+  }
+  .banner-box p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post .image {
+    width: 36rem;
+    height: 30rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact .contact-box {
+    width: 40rem;
+  }
+
+  .contact .contact-box form {
+    width: 40rem;
+  }
+
+  .contact .contact-box .form textarea {
+    width: 37rem;
+    margin-left: 1.5rem;
+  }
+}
