@@ -6,7 +6,7 @@
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-* {
+*,::before,::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -249,6 +249,7 @@ ul {
 
 .post .reaction-box a:hover {
   color: var(--light);
+  letter-spacing: .1rem;
 }
 .post .reaction-box i {
   color: var(--green);
@@ -427,6 +428,24 @@ ul {
 
 .contact .contact-box .btn {
   margin-bottom: 1rem;
+}
+
+.top-arrow {
+  background-color: var(--green);
+  padding: .5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 18%;
+  right: 2%;
+  text-align: center;
+}
+
+.top-arrow i {
+  font-size: 4rem;
+  color: var(--light);
+
 }
 
 /* footer section */
